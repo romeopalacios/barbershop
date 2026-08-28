@@ -1,21 +1,19 @@
 const BOOKING_URL = "https://booksy.com/en-us/1654_m-barbering_barber-shop_134655_los-angeles/staffer/109442#ba_s=dl_1";
 const CONTACT_EMAIL = "YOUR_EMAIL_HERE"; // Example: hello@thedonla.com
 
-// Mobile browsers often restore the last scroll position when the page is
-// reopened. Start regular homepage visits at the hero, but keep intentional
-// section links such as #work and #book working normally.
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
-
 const startAtTop = () => {
-  if (!window.location.hash) {
+  const root = document.documentElement;
+  root.style.scrollBehavior = 'auto';
+  window.scrollTo(0, 0);
+  requestAnimationFrame(() => {
     window.scrollTo(0, 0);
-  }
+    root.style.removeProperty('scroll-behavior');
+  });
 };
 
 startAtTop();
 window.addEventListener('pageshow', startAtTop);
+window.addEventListener('load', startAtTop, { once: true });
 
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');

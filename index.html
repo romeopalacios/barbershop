@@ -6,6 +6,14 @@
   <meta name="theme-color" content="#080808" />
   <meta name="description" content="The Don LA — precision barbering, clean fades, sharp lineups and premium grooming in Los Angeles. Book your appointment online." />
   <title>The Don LA | Premium Barbering</title>
+  <script>
+    // Always open the homepage at the hero. Running this in the head prevents
+    // the browser from restoring a previous section before the page is painted.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    document.documentElement.style.scrollBehavior = 'auto';
+    scrollTo(0, 0);
+  </script>
   <link rel="icon" type="image/jpeg" href="assets/profile.jpg" />
   <link rel="apple-touch-icon" href="assets/profile.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
