@@ -6,6 +6,8 @@
   <meta name="theme-color" content="#080808" />
   <meta name="description" content="The Don LA — precision barbering, clean fades, sharp lineups and premium grooming in Los Angeles. Book your appointment online." />
   <title>The Don LA | Premium Barbering</title>
+  <link rel="icon" type="image/jpeg" href="assets/profile.jpg" />
+  <link rel="apple-touch-icon" href="assets/profile.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
@@ -15,13 +17,13 @@
   <div class="grain" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="The Don LA home">
-      <span class="brand-mark">
-        <img src="assets/profile.jpg" alt="The Don LA logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+    <div class="brand">
+      <button class="brand-mark" type="button" aria-label="Enlarge The Don LA logo" aria-haspopup="dialog">
+        <img src="assets/profile.jpg" alt="The Don LA logo" />
         <span class="brand-fallback">TD</span>
-      </span>
-      <span class="brand-name">THE DON <em>LA</em></span>
-    </a>
+      </button>
+      <a class="brand-name" href="index.html" aria-label="Reload The Don LA homepage">THE DON <em>LA</em></a>
+    </div>
 
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
       <span></span><span></span>
@@ -31,7 +33,7 @@
       <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
-      <a class="nav-book" href="https://mbarbering.booksy.com/a/" target="_blank" rel="noopener">Book The Don</a>
+      <a class="nav-book" href="#book">Book The Don</a>
     </nav>
   </header>
 
@@ -45,17 +47,23 @@
         <h1>Precision.<br><i>Presence.</i><br>The Don.</h1>
         <p class="hero-text">Premium cuts built around detail, confidence, and a finish that speaks before you do.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="https://mbarbering.booksy.com/a/" target="_blank" rel="noopener">Book Appointment <span>↗</span></a>
+          <a class="button button-primary" href="#book">Book Appointment <span>↓</span></a>
           <a class="text-link" href="#work">View the work <span>↓</span></a>
         </div>
       </div>
 
       <div class="hero-visual reveal delay-1">
         <div class="hero-frame">
-          <img src="assets/gallery/01.jpg" alt="Featured haircut by The Don LA" onerror="this.src='assets/gallery/placeholder-01.svg'" />
+          <img class="featured-photo" src="assets/gallery/featured.png" alt="The Don LA in Los Angeles" decoding="async" fetchpriority="high" onerror="this.remove()" />
           <div class="frame-label">THE DON LA / 001</div>
         </div>
         <div class="vertical-copy">CUT WITH INTENTION · LOS ANGELES</div>
+      </div>
+
+      <div class="hero-stats reveal delay-1" aria-label="The Don LA highlights">
+        <div><strong>Premium</strong><span>One-on-one service</span></div>
+        <div><strong>LA</strong><span>Based barber</span></div>
+        <div><strong>Detail</strong><span>In every finish</span></div>
       </div>
 
       <a class="scroll-cue" href="#work" aria-label="Scroll to work"><span></span> SCROLL</a>
@@ -77,12 +85,12 @@
       </div>
 
       <div class="gallery">
-        <figure class="gallery-item gallery-tall reveal"><img src="assets/gallery/01.jpg" alt="Barber work by The Don LA" onerror="this.src='assets/gallery/placeholder-01.svg'"><figcaption>Precision / 01</figcaption></figure>
-        <figure class="gallery-item reveal delay-1"><img src="assets/gallery/02.jpg" alt="Barber work by The Don LA" onerror="this.src='assets/gallery/placeholder-02.svg'"><figcaption>Detail / 02</figcaption></figure>
-        <figure class="gallery-item reveal"><img src="assets/gallery/03.jpg" alt="Barber work by The Don LA" onerror="this.src='assets/gallery/placeholder-03.svg'"><figcaption>Finish / 03</figcaption></figure>
-        <figure class="gallery-item gallery-wide reveal"><img src="assets/gallery/04.jpg" alt="Barber work by The Don LA" onerror="this.src='assets/gallery/placeholder-04.svg'"><figcaption>Craft / 04</figcaption></figure>
-        <figure class="gallery-item reveal delay-1"><img src="assets/gallery/05.jpg" alt="Barber work by The Don LA" onerror="this.src='assets/gallery/placeholder-05.svg'"><figcaption>Form / 05</figcaption></figure>
-        <figure class="gallery-item gallery-tall reveal"><img src="assets/gallery/06.jpg" alt="Barber work by The Don LA" onerror="this.src='assets/gallery/placeholder-06.svg'"><figcaption>Don Standard / 06</figcaption></figure>
+        <figure class="gallery-item reveal"><img src="assets/gallery/03.jpg" alt="Finished fade and styled haircut by The Don LA" loading="lazy" decoding="async" onerror="this.remove()"><figcaption>Clean Finish / 01</figcaption></figure>
+        <figure class="gallery-item reveal delay-1"><img src="assets/gallery/04.jpg" alt="Creative mohawk and fade by The Don LA" loading="lazy" decoding="async" onerror="this.remove()"><figcaption>Creative Cut / 02</figcaption></figure>
+        <figure class="gallery-item reveal"><img src="assets/gallery/05.jpg" alt="Curly haircut and clean fade by The Don LA" loading="lazy" decoding="async" onerror="this.remove()"><figcaption>Fresh Fade / 03</figcaption></figure>
+        <figure class="gallery-item reveal delay-1"><img src="assets/gallery/06.jpg" alt="The Don creating a custom fade design" loading="lazy" decoding="async" onerror="this.remove()"><figcaption>Detail Work / 04</figcaption></figure>
+        <figure class="gallery-item reveal"><img src="assets/gallery/01.jpg" alt="Adult braided hairstyle with a sharp lineup by The Don LA" loading="lazy" decoding="async" onerror="this.remove()"><figcaption>Braids &amp; Lineup / 05</figcaption></figure>
+        <figure class="gallery-item reveal delay-1"><img src="assets/gallery/07.jpg" alt="Adult high-top fade by The Don LA" loading="lazy" decoding="async" onerror="this.remove()"><figcaption>High-Top Fade / 06</figcaption></figure>
       </div>
     </section>
 
@@ -91,14 +99,37 @@
         <p class="kicker">THE EXPERIENCE</p>
         <h2>Clean work.<br>Zero shortcuts.</h2>
         <p>Every appointment is about the full result—from consultation to the final detail. Select The Don on Booksy to see current services, pricing and availability.</p>
-        <a class="button button-outline" href="https://mbarbering.booksy.com/a/" target="_blank" rel="noopener">View Services on Booksy <span>↗</span></a>
+        <a class="button button-outline" href="#book">View Booking Options <span>↓</span></a>
       </div>
 
       <div class="service-list reveal delay-1">
-        <a href="https://mbarbering.booksy.com/a/" target="_blank" rel="noopener"><span>01</span><strong>Haircuts</strong><b>↗</b></a>
-        <a href="https://mbarbering.booksy.com/a/" target="_blank" rel="noopener"><span>02</span><strong>Fades</strong><b>↗</b></a>
-        <a href="https://mbarbering.booksy.com/a/" target="_blank" rel="noopener"><span>03</span><strong>Lineups</strong><b>↗</b></a>
-        <a href="https://mbarbering.booksy.com/a/" target="_blank" rel="noopener"><span>04</span><strong>Grooming</strong><b>↗</b></a>
+        <a href="#book"><img src="assets/profile.jpg" alt=""><strong>Haircuts</strong><b>↓</b></a>
+        <a href="#book"><img src="assets/profile.jpg" alt=""><strong>Fades</strong><b>↓</b></a>
+        <a href="#book"><img src="assets/profile.jpg" alt=""><strong>Lineups</strong><b>↓</b></a>
+        <a href="#book"><img src="assets/profile.jpg" alt=""><strong>Grooming</strong><b>↓</b></a>
+      </div>
+    </section>
+
+    <section class="book-panel section" id="book">
+      <div class="book-panel-copy reveal">
+        <p class="kicker">BOOK THE DON</p>
+        <h2>Your chair.<br>Your time.</h2>
+        <p>Review The Don’s current services and pricing here, then continue to his verified Booksy calendar to choose an available time.</p>
+      </div>
+      <div class="book-card reveal delay-1">
+        <div class="book-card-brand"><img src="assets/profile.jpg" alt="The Don LA logo"><div><strong>THE DON LA</strong><span>Los Angeles · Master Barber</span></div></div>
+        <div class="booksy-services" aria-label="The Don services and prices">
+          <div><p><strong>Executive Haircut</strong><small>1 hour</small></p><b>$60</b></div>
+          <div><p><strong>Kids Cut</strong><small>30 minutes</small></p><b>$40</b></div>
+          <div><p><strong>Line Up</strong><small>30 minutes</small></p><b>$30</b></div>
+          <div><p><strong>After Hours Cut</strong><small>1 hour</small></p><b>$100</b></div>
+          <div><p><strong>Haircut &amp; Texturizer</strong><small>1 hour 30 minutes</small></p><b>$85</b></div>
+          <div><p><strong>Executive Shave</strong><small>30 minutes</small></p><b>$40</b></div>
+          <div><p><strong>Hair Color and Haircut</strong><small>1 hour 30 minutes</small></p><b>Varies</b></div>
+          <div><p><strong>Traditional Shave</strong><small>30 minutes</small></p><b>$30</b></div>
+        </div>
+        <a class="button button-primary booksy-final" href="https://booksy.com/en-us/1654_m-barbering_barber-shop_134655_los-angeles/staffer/109442#ba_s=dl_1" target="_blank" rel="noopener">Book with The Don <span>↗</span></a>
+        <small class="secure-note">Official booking calendar · Opens securely in a new tab</small>
       </div>
     </section>
 
@@ -107,7 +138,7 @@
         <p>READY FOR THE CHAIR?</p>
         <h2>Book with <i>The Don.</i></h2>
       </div>
-      <a class="booking-circle" href="https://mbarbering.booksy.com/a/" target="_blank" rel="noopener" aria-label="Book The Don on Booksy"><span>BOOK<br>NOW</span><b>↗</b></a>
+      <a class="booking-circle" href="#book" aria-label="Go to The Don booking section"><span>BOOK<br>NOW</span><b>↑</b></a>
     </section>
 
     <section class="contact section" id="contact">
@@ -130,11 +161,19 @@
   </main>
 
   <footer>
-    <a class="footer-brand" href="#top">THE DON <i>LA</i></a>
+    <a class="footer-brand" href="#top"><img src="assets/profile.jpg" alt="The Don LA"><span>THE DON <i>LA</i></span></a>
     <p>Precision barbering · Los Angeles</p>
-    <div><a href="https://www.instagram.com/thedonla23" target="_blank" rel="noopener">Instagram</a><a href="https://mbarbering.booksy.com/a/" target="_blank" rel="noopener">Booksy</a></div>
+    <div><a href="https://www.instagram.com/thedonla23" target="_blank" rel="noopener">Instagram</a><a href="#book">Book</a></div>
     <small>© <span id="year"></span> The Don LA</small>
   </footer>
+
+  <div class="logo-lightbox" role="dialog" aria-modal="true" aria-label="The Don LA logo preview" hidden>
+    <button class="logo-lightbox-backdrop" type="button" aria-label="Close logo preview"></button>
+    <div class="logo-lightbox-content">
+      <button class="logo-lightbox-close" type="button" aria-label="Close logo preview">×</button>
+      <img src="assets/profile.jpg" alt="The Don LA logo enlarged">
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

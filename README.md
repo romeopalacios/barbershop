@@ -7,14 +7,12 @@ A responsive, mobile-first barber portfolio and booking website.
 2. Open `The-Don-LA` in VS Code.
 3. Install/use the **Live Server** extension and open `index.html` with Live Server.
 
-## Add the real Instagram logo/profile image
-Instagram blocked automated image retrieval while this template was generated, so the project intentionally does **not** invent or substitute his profile photo.
-
-Save his Instagram profile icon as:
+## Instagram logo/profile image
+The public @thedonla23 profile logo is included locally at:
 
 `assets/profile.jpg`
 
-The circular header logo will use it automatically.
+It is used for the favicon, mobile home-screen icon, header, service icons, gallery fallbacks, and footer.
 
 ## Add the best Instagram gallery photos
 Download/select six photos from @thedonla23 and save them exactly as:

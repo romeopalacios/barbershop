@@ -1,13 +1,34 @@
-const BOOKING_URL = "https://mbarbering.booksy.com/a/";
+const BOOKING_URL = "https://booksy.com/en-us/1654_m-barbering_barber-shop_134655_los-angeles/staffer/109442#ba_s=dl_1";
 const CONTACT_EMAIL = "YOUR_EMAIL_HERE"; // Example: hello@thedonla.com
 
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
+const logoButton = document.querySelector('.brand-mark');
+const logoLightbox = document.querySelector('.logo-lightbox');
+const logoCloseButton = document.querySelector('.logo-lightbox-close');
+const logoBackdrop = document.querySelector('.logo-lightbox-backdrop');
+
+const openLogo = () => {
+  logoLightbox.hidden = false;
+  document.body.classList.add('logo-open');
+  logoCloseButton.focus();
+};
+
+const closeLogo = () => {
+  logoLightbox.hidden = true;
+  document.body.classList.remove('logo-open');
+  logoButton.focus();
+};
+
+logoButton.addEventListener('click', openLogo);
+logoCloseButton.addEventListener('click', closeLogo);
+logoBackdrop.addEventListener('click', closeLogo);
 
 menuButton.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   document.body.classList.toggle('menu-open', open);
   menuButton.setAttribute('aria-expanded', open);
+  menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
 });
 
 document.querySelectorAll('.nav a').forEach(link => link.addEventListener('click', () => {
@@ -15,6 +36,20 @@ document.querySelectorAll('.nav a').forEach(link => link.addEventListener('click
   document.body.classList.remove('menu-open');
   menuButton.setAttribute('aria-expanded', 'false');
 }));
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !logoLightbox.hidden) {
+    closeLogo();
+    return;
+  }
+  if (event.key === 'Escape' && nav.classList.contains('open')) {
+    nav.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation');
+    menuButton.focus();
+  }
+});
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
