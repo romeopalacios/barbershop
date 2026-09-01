@@ -53,9 +53,9 @@ If you want fully in-page form delivery later, connect Formspree, FormSubmit, Ba
 1. Create a GitHub repo.
 2. Push this folder.
 3. In GitHub: Settings → Pages → Deploy from branch → `main` / root.
-4. Set the custom domain to `alwayscuttin.net` and enable **Enforce HTTPS** after the certificate is issued.
+4. Set the custom domain to `alwayscuttin.org` and enable **Enforce HTTPS** after the certificate is issued.
 
-## Squarespace DNS for alwayscuttin.net
+## Squarespace DNS for alwayscuttin.org
 
 Add these records in Squarespace Domains → DNS Settings:
 
