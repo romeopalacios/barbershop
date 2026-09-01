@@ -53,4 +53,18 @@ If you want fully in-page form delivery later, connect Formspree, FormSubmit, Ba
 1. Create a GitHub repo.
 2. Push this folder.
 3. In GitHub: Settings → Pages → Deploy from branch → `main` / root.
-4. Add a custom domain when ready.
+4. Set the custom domain to `alwayscuttin.net` and enable **Enforce HTTPS** after the certificate is issued.
+
+## Squarespace DNS for alwayscuttin.net
+
+Add these records in Squarespace Domains → DNS Settings:
+
+| Host | Type | Data |
+| --- | --- | --- |
+| `@` | A | `185.199.108.153` |
+| `@` | A | `185.199.109.153` |
+| `@` | A | `185.199.110.153` |
+| `@` | A | `185.199.111.153` |
+| `www` | CNAME | `romeopalacios.github.io` |
+
+Remove any conflicting `@` A/AAAA records or `www` CNAME records. DNS and the GitHub HTTPS certificate may take up to 24 hours to finish provisioning.
