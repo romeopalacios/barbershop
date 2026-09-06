@@ -10,7 +10,7 @@ A responsive, mobile-first barber portfolio and booking website.
 ## Instagram logo/profile image
 The public @thedonla23 profile logo is included locally at:
 
-`assets/profile.jpg`
+`assets/newlogo.jpg`
 
 It is used for the favicon, mobile home-screen icon, header, service icons, gallery fallbacks, and footer.
 
