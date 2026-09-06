@@ -41,11 +41,7 @@ All booking CTAs currently point to:
 The copy tells users to select **The Don** on Booksy.
 
 ## Contact form
-Open `script.js` and replace:
-
-`const CONTACT_EMAIL = "YOUR_EMAIL_HERE";`
-
-with the email address that should receive inquiries. The starter form opens the visitor's email client using a pre-filled email, which works on static GitHub Pages without a backend.
+The contact form sends inquiries to `donjohnson1902@gmail.com`. It opens the visitor's email client with a pre-filled email, which works on static GitHub Pages without a backend.
 
 If you want fully in-page form delivery later, connect Formspree, FormSubmit, Basin, Netlify Forms, or your own backend.
 

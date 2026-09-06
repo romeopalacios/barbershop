@@ -1,5 +1,5 @@
 const BOOKING_URL = "https://booksy.com/en-us/1654_m-barbering_barber-shop_134655_los-angeles/staffer/109442#ba_s=dl_1";
-const CONTACT_EMAIL = "YOUR_EMAIL_HERE"; // Example: hello@thedonla.com
+const CONTACT_EMAIL = "donjohnson1902@gmail.com";
 
 const startAtTop = () => {
   const root = document.documentElement;
