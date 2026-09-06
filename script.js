@@ -78,16 +78,9 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const form = document.getElementById('contactForm');
-const note = document.getElementById('formNote');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  if (!CONTACT_EMAIL || CONTACT_EMAIL === 'YOUR_EMAIL_HERE') {
-    note.textContent = 'Add The Don’s contact email in script.js to activate this form.';
-    note.style.color = '#c8ff3d';
-    return;
-  }
-
   const data = new FormData(form);
   const subject = encodeURIComponent(`The Don LA website inquiry from ${data.get('name')}`);
   const body = encodeURIComponent(
