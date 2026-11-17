@@ -1,4 +1,4 @@
-const BOOKING_URL = "https://booksy.com/en-us/1654_m-barbering_barber-shop_134655_los-angeles/staffer/109442#ba_s=dl_1";
+const BOOKING_URL = "https://app.thecut.co/barbers/Don--Johnson-dj6i4ey";
 const CONTACT_EMAIL = "donjohnson1902@gmail.com";
 
 const startAtTop = () => {
