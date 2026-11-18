@@ -81,14 +81,48 @@ const form = document.getElementById('contactForm');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const data = new FormData(form);
-  const subject = encodeURIComponent(`The Don LA website inquiry from ${data.get('name')}`);
-  const body = encodeURIComponent(
-`Name: ${data.get('name')}
-Email: ${data.get('email')}
-Phone: ${data.get('phone') || 'Not provided'}
+  const submitButton = form.querySelector('button[type="submit"]');
+  const formNote = document.getElementById('formNote');
 
-${data.get('message')}`
-  );
-  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    formNote.textContent = 'Please complete every field before sending.';
+    formNote.className = 'form-note form-error';
+    return;
+  }
+
+  const data = new FormData(form);
+  data.append('_subject', `DJ Live AC booking inquiry from ${data.get('name')}`);
+  data.append('_template', 'table');
+  data.append('_captcha', 'false');
+
+  submitButton.disabled = true;
+  submitButton.classList.add('is-loading');
+  submitButton.firstChild.textContent = 'Sending… ';
+  formNote.textContent = 'Sending your booking inquiry…';
+  formNote.className = 'form-note';
+
+  fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+    method: 'POST',
+    headers: { Accept: 'application/json' },
+    body: data
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error('Submission failed');
+      return response.json();
+    })
+    .then(() => {
+      form.reset();
+      formNote.textContent = 'Thank you — your inquiry was sent. We’ll be in touch soon.';
+      formNote.className = 'form-note form-success';
+    })
+    .catch(() => {
+      formNote.textContent = 'We couldn’t send that right now. Please try again or message @djliveac on Instagram.';
+      formNote.className = 'form-note form-error';
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+      submitButton.classList.remove('is-loading');
+      submitButton.firstChild.textContent = 'Send Inquiry ';
+    });
 });
