@@ -119,8 +119,8 @@ body.logo-open{overflow:hidden}
 
 /* Shop announcement, featured location artwork, video, and on-page booking. */
 .shop-announcement{position:relative;z-index:30;min-height:42px;padding:10px var(--pad);display:flex;align-items:center;justify-content:center;gap:18px;background:#9159d9;color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;text-align:center;text-transform:uppercase}.shop-announcement a{border-bottom:1px solid rgba(255,255,255,.45)}.shop-announcement strong{font-weight:700}.shop-weekdays{padding-right:18px;border-right:1px solid rgba(255,255,255,.38)}
-.site-header{top:42px}.hero{padding-top:182px}.hero-frame .hero-feature-photo{object-fit:contain;object-position:center;background:#1e2023;padding:0;filter:none}
+.site-header{top:42px}.hero{padding-top:182px}
 .gallery-video video{display:block;width:100%;height:100%;object-fit:cover;background:#080808}.gallery-video:after{display:none}
-.booking-embed-card{padding-bottom:30px}.booking-embed{display:block;width:100%;height:720px;margin-top:24px;border:0;background:#fff}.booking-embed-card .secure-note{color:#aaa}
-@media(max-width:900px){.hero{padding-top:150px}.booking-embed{height:760px}}
-@media(max-width:680px){.shop-announcement{min-height:76px;padding:10px 16px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:9px;line-height:1.35;text-align:left}.shop-announcement strong{grid-column:1/-1;text-align:center}.shop-weekdays{grid-row:1;padding-right:10px}.site-header{top:76px}.hero{padding-top:170px}.booking-embed{height:700px}.hero-frame{aspect-ratio:1320/1106}}
+.booking-embed-card{padding-bottom:24px}.booking-location-logo{object-fit:contain!important;background:#1e2023}.booking-embed{display:block;width:100%;height:540px;margin-top:18px;border:0;background:#fff}.booking-embed-card .secure-note{color:#aaa}
+@media(max-width:900px){.hero{padding-top:150px}.booking-embed{height:560px}}
+@media(max-width:680px){.shop-announcement{min-height:76px;padding:10px 16px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:9px;line-height:1.35;text-align:left}.shop-announcement strong{grid-column:1/-1;text-align:center}.shop-weekdays{grid-row:1;padding-right:10px}.site-header{top:76px}.hero{padding-top:170px}.booking-embed{height:520px}.hero-frame{aspect-ratio:1}}
