@@ -1,4 +1,3 @@
-const BOOKING_URL = "https://app.thecut.co/barbers/Don--Johnson-dj6i4ey";
 const CONTACT_EMAIL = "donjohnson1902@gmail.com";
 
 const startAtTop = () => {
